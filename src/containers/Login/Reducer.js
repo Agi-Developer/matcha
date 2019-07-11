@@ -8,7 +8,7 @@ const reducer = (state = initialState, action) => {
     let newState;;
     switch (action.type) {
         case actionTypes.LOGIN:
-            console.log(action);
+            console.log("from reducer: ", action);
             newState = state;
             break;
         default:

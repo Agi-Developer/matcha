@@ -10,16 +10,23 @@ class Login extends Component {
         password: ""
     }
     handleLogin = (e, values) => {
-
+        e.preventDefault();
+        this.props.onLogin(this.state.username, this.state.password);
     }
+    handleChange = (e, data) => {
+        this.setState({
+            [data.name]: data.value
+        })
+    }
+
     render() {
         return (
             <div>
-                <form onSubmit={this.props.handleLogin}>
-                    <Input placeholder="User name" />
-                    <Input placeholder="Password" />
+                <Form onSubmit={this.props.handleLogin}>
+                    <Input onChange={this.handleChange} name="username" value={this.state.username} placeholder="User name" />
+                    <Input onChange={this.handleChange} name="password" placeholder="Password" />
                     <Button primary> Login </Button>
-                </form>
+                </Form>
             </div>
         );
     }
