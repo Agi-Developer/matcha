@@ -1,10 +1,17 @@
 import React from "react";
-import { Input, Button } from "semantic-ui-react";
+import { Input, Button, Form } from "semantic-ui-react";
 import * as actionTypes from "./ActionTypes";
 import { connect } from "react-redux";
 import { Component } from "react";
 
 class Login extends Component {
+    state = {
+        username: "",
+        password: ""
+    }
+    handleLogin = (e, values) => {
+
+    }
     render() {
         return (
             <div>

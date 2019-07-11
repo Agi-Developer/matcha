@@ -5,7 +5,7 @@ import Login from "./containers/Login/Login";
 
 class App extends Component {
     render() {
-        return <Route path="/login" exact render={Login} />;
+        return <Route path="/login" exact component={Login} />;
     }
 }
 
